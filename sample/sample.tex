@@ -1,0 +1,114 @@
+\documentclass[centerpage]{ecaps}
+\doctitle{TheECAPS {\LaTeX} class}
+\docsubtitle{A sample document}
+\docnumber{00-00000-0}
+\author{Pete Friedhoff}
+
+
+\begin{document}
+\titlepage
+
+\begin{approvals}
+\approver{Pete Friedhoff}{Systems Engineer}
+\approver{etc}{etc}
+\approver{etc}{etc}
+\end{approvals}
+
+\begin{applicableprograms}
+\applicableprog{SkySat}
+\end{applicableprograms}
+
+\begin{revhistory}
+\revitem{0.1}{Dec 5, 2018}{Initial release}
+\end{revhistory}
+
+\contents
+
+\section{Introduction}
+
+This document is a {\LaTeX} sample document using the ECAPS latex class \texttt{ecaps.cls}.
+
+The latest version of the class and associated files can be found at:
+
+\begin{center}
+\url{https://github.com/bradford-ecaps/ecaps_latex_class}
+\end{center}
+
+\par
+The ECAPS logo file is located in the same directory as the {\LaTeX} source files.
+
+\section{Class commands}
+
+The following commands are provided by this class:
+
+
+\texttt{\textbackslash doctitle\{<title of the document>\}}
+
+\texttt{\textbackslash docsubtitle\{<subtitle of the document>\}}
+
+\texttt{\textbackslash docnumber\{<document number>\}}
+
+\texttt{\textbackslash author\{<docment author>\}}
+
+\section{Class Options}
+\begin{description}
+\item [\texttt{centerpage}] Centers the body text in the page.
+\item [\texttt{10pt}] Use 10-point font for body text.
+\item [\texttt{11pt}] Use 11-point font for body text.
+\item [\texttt{12pt}] Use 12-point font for body text. (This is the default).
+\end{description}
+This class also takes all options accepted by the article class.
+
+\section{Class environents}
+
+The following environments are provided by this class:
+
+\begin{verbatim}
+\begin{approvals}
+\approver{<name 1>}{<function 1>}
+\approver{<name 2>}{<function 2>}
+...
+\end{approvals}
+
+\begin{applicableprograms}
+\applicableprog{program 1}
+\applicableprog{program 2}
+...
+\end{applicableprograms}
+
+\begin{revhistory}
+\revitem{<rev number 1>}{<date 1>}{<description of revision 1>}
+\revitem{<rev number 2>}{<date 2>}{<description of revision 2>}
+... 
+\end{revhistory}
+\end{verbatim}
+
+\section{Class goodies}
+
+Several useful commands are enabled by the \texttt{ecaps.cls} class:
+\begin{description}
+\item [\texttt{\textbackslash super\{\}}] superscripts the argument, like in 1\super{st} or 2\super{10};
+\item [\texttt{\textbackslash sub\{\}}] subscripts the argument, like in A\sub{i};
+\item [\texttt{\textbackslash unit\{\}}] adds units to a number using the correct non-breakable spacing and correct font shaping, like in 12\unit{\textmu V} or $x=10\unit{$\Omega$}$; works in text or math modes.
+\item [\texttt{\textbackslash vector\{\}}] bold fonts for vector or matrices in math mode, like in $x \in \vect{A}^n$;
+\item [\texttt{\textbackslash Re}, \texttt{\textbackslash Im}] are the real and imaginary part symbols in math mode as in $ I = \Re(Z)$, $Q = \Im(Z)$;
+\item [\texttt{\textbackslash e}] Provides easy scientific notation. e.g \verb|3.2\e{-5}| \textrightarrow 3.2\e{-5}. Works both in and out of math mode.
+\item [\texttt{\textbackslash color\{ECAPSBlue\}\{\}}] e.g. \color{ECAPSBlue}{ECAPS Blue!} \color{ECAPSBlue!50}{(A lighter touch.)}
+\end{description}
+
+
+
+\section{Preloaded packages}
+
+The following packages are loaded in the \texttt{ecaps.cls} class:
+\begin{description}
+\item [\texttt{geometry}]  provides a fexible and easy interface to page dimensions;
+\item [\texttt{xcolor}] provides easy driver-independent access to several kinds of colors, tints, shades, tones, and mixes of arbitrary colors by means of color expressions like \\ \texttt{ \textbackslash color\{red!50!green!20!blue\}};
+\item [\texttt{graphicx}] enables the inclusion of figures in PDF, JPG or PNG formats (EPS is also possible);
+\item [\texttt{booktabs}] allows tables to be nicely formatted;
+\item [\texttt{textcomp}] adds a ton of symbols in text mode;
+%\item [\texttt{spreadtab}] enables spreadsheet calculations in tables; 
+\item [\texttt{hyperref}] enable hyperlinks in the document and external link references through the \texttt{\textbackslash url\{\}} command; 
+
+\end{description}
+\end{document}
